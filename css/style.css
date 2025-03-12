@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #f3e8ff;
+}
+
+.nav-link {
+    @apply text-white hover:text-purple-200 transition duration-200;
+}
+
+.footer {
+    @apply bg-gradient-to-r from-purple-400 to-indigo-500 py-6 text-white;
+}
+
+#typewriter {
+    border-right: .15em solid #6d28d9;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(40, end), blink .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #6d28d9; }
+}
+
+.card {
+    @apply bg-white shadow-lg rounded-lg p-6 transition duration-300 ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(109, 40, 217, 0.3);
+}
+
+.section-title {
+    @apply text-2xl font-semibold text-indigo-700 mb-4 border-b-4 border-indigo-400 inline-block;
+}
+
+.section-text {
+    @apply text-gray-700 leading-relaxed;
+}

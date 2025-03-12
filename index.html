@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melody Wall Capstone Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.5/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body class="bg-purple-50 text-gray-800 font-sans">
+
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-purple-500 to-indigo-600 shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-white font-extrabold text-5xl">Melody Wall</h1>
+            <ul class="flex space-x-6 text-lg">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="project.html" class="nav-link">About Project</a></li>
+                <li><a href="weekly-breakdown.html" class="nav-link">Weekly Breakdown</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Interactive Main Content -->
+    <main class="container mx-auto my-32 flex flex-col items-center justify-center">
+        <div id="typewriter" class="text-8xl font-extrabold text-indigo-700"></div>
+        <div class="mt-12 flex space-x-6 text-6xl animate-bounce">
+            <span>🎵</span>
+            <span>🎶</span>
+            <span>🎵</span>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">© 2025 treble-shooters. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const text = "Melody Wall Capstone Project";
+            const typewriter = document.getElementById('typewriter');
+            let i = 0;
+
+            function type() {
+                if (i < text.length) {
+                    typewriter.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, 100);
+                }
+            }
+
+            type();
+        });
+    </script>
+
+</body>
+</html>
