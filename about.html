@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Project - Melody Wall</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .about-section {
+            padding: 8rem 2rem 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .about-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .about-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+        }
+        .about-header h1::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            bottom: -10px;
+            left: 25%;
+            background: var(--gradient);
+        }
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+        .about-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        .about-text h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+        .tech-section {
+            margin-top: 4rem;
+        }
+        .tech-section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+        .tech-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .tech-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .tech-card:hover {
+            transform: translateY(-5px);
+        }
+        .tech-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+        .tech-card ul {
+            list-style-type: none;
+        }
+        .tech-card ul li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .tech-card ul li:last-child {
+            border-bottom: none;
+        }
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            .about-image {
+                order: -1;
+            }
+        }
+        .affiliation-section {
+            margin-top: 5rem;
+            padding-top: 3rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .affiliation-section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+        
+        .affiliation-content {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .affiliation-logo {
+            text-align: center;
+        }
+        
+        .affiliation-logo img {
+            max-width: 100%;
+            max-height: 200px;
+            box-shadow: var(--shadow);
+        }
+        
+        .affiliation-text h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .affiliation-text p {
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .affiliation-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .affiliation-logo {
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span>&#119070;</span> Melody Wall
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About Project</a>
+                <a href="team.html">About Us</a>
+                <a href="weekly.html">Weekly Breakdown</a>
+            </div>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <div class="about-header">
+                <h1>About Melody Wall</h1>
+                <p>Integrating physical interactions with digital music generation</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Project Overview</h2>
+                    <p>Melody Wall integrates physical interactions with digital music generation through a Piano Roll interface, leveraging image processing and real-time projection to enable musical expression without the need for musical training or instruments.</p>
+                    <p>Our interactive wall allows users to place physical objects which are detected by our system and transformed into musical notes. The result is an intuitive and engaging way to create music through spatial arrangements.</p>
+                    <p>The project combines elements of computer vision, web technologies, and physical computing to create an accessible platform for musical creativity.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Music Visualization">
+                </div>
+            </div>
+
+            <div class="tech-section">
+                <h2>Technical Specification</h2>
+                <div class="tech-cards">
+                    <div class="tech-card">
+                        <h3>Software Components</h3>
+                        <ul>
+                            <li><strong>Image Processing Pipeline:</strong> Webcam input processing</li>
+                            <li><strong>Shape Detection:</strong> Using TensorFlow.js and OpenCV.js</li>
+                            <li><strong>Music Player Software:</strong> Piano roll interface</li>
+                            <li><strong>Audio Engine:</strong> Web Audio API for MIDI sound generation</li>
+                            <li><strong>Mapping:</strong> Schema to map detected shapes to musical notes</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tech-card">
+                        <h3>Integration</h3>
+                        <ul>
+                            <li>Synchronization between image processing output and piano roll software</li>
+                            <li>Projection software displaying processed shapes</li>
+                            <li>Real-time piano roll playback visualization</li>
+                            <li>Interactive feedback system</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tech-card">
+                        <h3>Projection & Calibration</h3>
+                        <ul>
+                            <li>Real-time calibration of camera/projector setup</li>
+                            <li>Accurate interaction mapping</li>
+                            <li>Adjustable projection parameters</li>
+                            <li>Auto-correction mechanisms</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tech-card">
+                        <h3>Hardware Components</h3>
+                        <ul>
+                            <li><strong>Attachments & Prototypes:</strong> Velcro, slat, magnet, pinhole, suction cup</li>
+                            <li><strong>Interactive Wall:</strong> Custom-designed with attachment mechanism</li>
+                            <li><strong>Camera/Projector Stand:</strong> Adjustable for accurate calibration</li>
+                            <li><strong>Speakers:</strong> Audio output system</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="affiliation-section">
+                <h2>Academic Affiliation</h2>
+                <div class="affiliation-content">
+                    <div class="affiliation-logo">
+                        <img src="images/uoft.png" alt="University of Toronto Logo">
+                    </div>
+                    <div class="affiliation-text">
+                        <h3>University of Toronto - Department of Computer Science</h3>
+                        <p>This project is developed as part of <strong>CSC490: Capstone Design Project</strong> at the University of Toronto.</p>
+                        <p>The CSC490 course challenges students to create computer-driven systems that interact with people in the real world through various sensors and actuators, providing novel and compelling experiences that serve a social good.</p>
+                        <p>Melody Wall aims to make music creation more accessible and intuitive through physical interaction, encouraging collaborative creativity and expression without requiring traditional musical training.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span>&#119070;</span> Melody Wall
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Project</a>
+                <a href="team.html">About Us</a>
+                <a href="weekly.html">Weekly Breakdown</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/ayanaar/treble-shooters" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 treble-shooters. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
